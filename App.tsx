@@ -13,6 +13,8 @@ import Community from './pages/Community';
 import Donate from './pages/Donate';
 import Stories from './pages/Stories';
 import ProductDetails from './pages/ProductDetails';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
 
 // Mock/Placeholder pages for routing
 const Placeholder = ({ title }: { title: string }) => (
@@ -40,6 +42,8 @@ const App: React.FC = () => {
         <Route path="/shop/:id" element={<ProductDetails />} />
         <Route path="/portal" element={<Portal />} />
         <Route path="/stories" element={<Stories />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<Placeholder title="404 Not Found" />} />
       </Routes>
     </Layout>
