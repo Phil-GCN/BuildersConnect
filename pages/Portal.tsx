@@ -72,7 +72,7 @@ const Portal = () => {
   const [profileForm, setProfileForm] = useState<Partial<User>>(user || {});
 
   // Initialize Gemini for AI CMS
-  const ai = useMemo(() => new GoogleGenAI({ apiKey: process.env.API_KEY }), []);
+  const ai = useMemo(() => new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY }), []);
 
   if (!user) return <Navigate to="/" />;
 
