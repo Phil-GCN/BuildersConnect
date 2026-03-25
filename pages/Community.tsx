@@ -13,7 +13,7 @@ import { CommunityPost, Comment } from '../types';
 import { Edit2 } from 'lucide-react';
 
 // Initialize Gemini
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 const CommentNode = ({ 
   comment, 
